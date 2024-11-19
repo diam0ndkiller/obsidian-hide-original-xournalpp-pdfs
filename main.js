@@ -29,12 +29,10 @@ module.exports = class HideOriginalPDFs extends require("obsidian").Plugin {
     if (fileExplorer) {
       const root = fileExplorer.view.fileItems;
       Object.keys(root).forEach(path => {
+        console.log(root[path]);
         const item = root[path];
         if (hiddenPaths.has(path)) {
-          item.setCollapsed(true); // Collapse instead of deleting
-          item.containerEl.style.display = "none"; // Hide from view
-        } else {
-          item.containerEl.style.display = ""; // Ensure other items are visible
+          item.selfEl.style.display = "none"; // Hide from view
         }
       });
     }
