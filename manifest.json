@@ -1,10 +1,10 @@
 {
-  "id": "hide-original-pdfs",
-  "name": "Hide Original PDFs",
+  "id": "obsidian-hide-original-xournalpp-pdfs",
+  "name": "Hide Original Xournal++ PDFs",
   "version": "1.0.0",
   "minAppVersion": "1.0.0",
   "description": "Hides original PDFs from the file explorer if annotated versions (_a) exist.",
-  "author": "Your Name",
-  "authorUrl": "Your Website",
+  "author": "diam0ndkiller, ChatGPT",
+  "authorUrl": "",
   "isDesktopOnly": true
 }
