@@ -11,7 +11,7 @@ module.exports = class HideOriginalPDFs extends obsidian.Plugin {
     this.ribbon = this.addRibbonIcon(
       "eye-off",
       "Toggle PDF hiding",
-      () => this.toggleHiding()
+      async () => await this.toggleHiding()
     );
     this.updateRibbonState();
 
@@ -82,9 +82,9 @@ module.exports = class HideOriginalPDFs extends obsidian.Plugin {
   // Update ribbon icon state
   updateRibbonState() {
     if (this.settings.enabled) {
-      this.ribbon.icon = "eye-off"; // Enabled icon
+      obsidian.setIcon(this.ribbon, "eye-off"); // Enabled icon
     } else {
-      this.ribbon.icon = "eye"; // Disabled icon
+      obsidian.setIcon(this.ribbon, "eye"); // Disabled icon
     }
   }
 };
