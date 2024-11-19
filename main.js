@@ -72,9 +72,9 @@ module.exports = class HideOriginalPDFs extends obsidian.Plugin {
     await this.saveData(this.settings);
     this.updateRibbonState();
     if (this.settings.enabled) {
-      new Notice("PDF hiding enabled");
+      new Notice("PDF hiding enabled").noticeEl.style.color = "green";
     } else {
-      new Notice("PDF hiding disabled");
+      new Notice("PDF hiding disabled").noticeEl.style.color = "red";
     }
     this.hideFiles();
   }
